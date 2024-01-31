@@ -43,45 +43,77 @@ TP1 - UML : UML et Principes de POO
   ```
   * La classe ``Client0N`` représente ce cas.
   
-Les deux cas représentent la relation de composition.
+Les deux cas représentent la relation d'association.
 
 ### Question 1.3
 
-- Le `type statique` représente le type connu dès la compilation du fichier.
+- Le `type statique` représente le type connu dès la compilation du fichier, il s'agit du type donné par le programmeur.
 
-- Le `type dynamique` représente le type connu dès l'exécution du programme. Le type dynamique est souvent un sous-type d'un type statique.
+- Le `type dynamique` représente le type connu dès l'exécution du programme. Le type dynamique est souvent un sous-type d'un type statique. Il s'agit d'un type exact.
 
-Voici quelques moyens pour reconnaître le genre de type d'une variable : 
+Voici quelques moyens pour reconnaître le genre de type d'une variable : (moyen mnémotechnique)
 * Le type fixé par le programmeur peut être associé à d'autre type sans que cela pose d'erreurs de compilation, il s'agira d'un type dynamique.
 * Le type fixé par le programmeur à un type unique, on dira alors qu'il s'agit d'un type statique.
 
 ### Question 1.4
 
 - Concernant le `type statique` associant à la variable appareil :
-  + La classe DigitalCamera
-  + La classe WebCam
-  + La classe Scanner
+ * ImagingDevice pour la classe Client01
+ * List<ImagingDevice> pour la classe Client0N
 
 - Concernant le `type dynamique`, nous avons :
-    * l'interface Device
-    * l'interface ImagingDevice
-    * la classe Camera car DigitalCamera et WebCam sont des sous-type de Camera
-
-
-
-***
-***
-
-
-# `TODO` à poser
+    * La classe DigitalCamera
+    * La classe WebCam
+    * la classe Scanner
+ 
 ### Question 1.5
 
---> Je n'ai pas compris
+* Cas 01
+***
+***
+
+```mermaid
+graph TD;
+    Client-->Scanner;
+```
+
+* Cas 0N
+***
+***
+
+```mermaid
+graph TD;
+    Client-->Scanner1;
+    Client-->Scanner2;
+```
+
+```mermaid
+graph TD;
+    Client-->DigitalCamera;
+```
+
+```mermaid
+graph TD;
+    Client-->WebCam;
+```
+
+* Dans les deux cas
+***
+***
+
+```mermaid
+graph TD;
+    Client
+```
 
 ### Question 1.6
 
---> Je n'ai pas compris
+A partir de la variable appareil, on peut accéder, quel que soit le type dynamique aux méthodes register() et capture().
 
+Selon les classes issus des types dynamique, on aura en plus leurs méthodes.
+Depuis la classe Scanner, on aura accès aux méthodes suivantes : register(), capture() et warmup().
+Depuis la classe WebCam, on aura accès aux méthodes suivantes : register(), capture(), setResolution(int) et setContrast(float).
+Depuis la classe DigitalCamera, on aura accès aux méthodes suivantes : register(), capture(), setResolution(int) et setFlash(bool).
 
 ***
 ***
