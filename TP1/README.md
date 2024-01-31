@@ -6,35 +6,44 @@ TP1 - UML : UML et Principes de POO
 
 <!-- Classes | Interfaces -->
 
-- `Device` : Interface
-- `Client` : Classe contenant un attribut de type ImagingDevice
-- `ImagingDevice` : Interface qui étend l'interface Device
-- `Camera` : Classe abstraite qui implémente l'interface ImagingDevice
-- `Scanner` : Classe qui implémente l'interface ImagingDevice
-- `DigitalCamera` : Classe qui étend la classe abstraite Camera
-- `WebCam` : Classe qui étend la classe abstraite WebCam
+- `Device` : Interface, ne contient qu'une commande register().
+- `Client` : Classe contenant un attribut de type ImagingDevice.
+- `ImagingDevice` : Interface qui étend l'interface Device, ne contient qu'une requête capture() et par définition la commande register().
+- `Camera` : Classe abstraite qui implémente l'interface ImagingDevice dont la classe abstraite ou ses sous-classes doivent implémenter les méthodes non implémentées des interfaces et classes héritées. Ces méthodes sont les suivants :
+  * register() depuis l'interface Device
+  * capture() depuis l'interface ImagingDevice
+  * setResolution(int) depuis la classe abstraite elle-même
+
+  La classe abstraite :
+    *  peut contenir des méthodes concrètes non final qui seront redéfinies par la ou les sous-classes
+    *  peut contenir des méthodes non concrètes
+    *  n'est pas instanciable
+
+- `Scanner` : Classe qui implémente l'interface ImagingDevice donc doit implémenter exactement toutes les méthodes non implémentées des interfaces (Device et ImagingDevice). La classe contient en plus la commande warmup(). 
+- `DigitalCamera` : Classe qui étend la classe abstraite Camera donc doit implémenter les méthodes non implémentées et issues des interfaces des classes abtraites héritées. Elle contient en plus la méthode (commande) setFlash(bool).
+- `WebCam` : Classe qui étend la classe abstraite WebCam donc doit implémenter les méthodes non implémentées issues des interfaces et des classes abtraites héritées. De plus elle doit définir la commande setContrast(float).
 
 ### Question 1.2
 
-- L'association `0..1`, se traduit par défaut par
+- L'association `0..1`, peut se traduire par
   ```
   ImagingDevice device = null;
   ```
   ou par
   ```
-  ImagingDevice device = new Camera();
+  ImagingDevice device = new DigitalCamera();  // DigitalCamera est de type ImagingDevice et est instanciable
   ```
-  La cardinalité `0..1` signifie que le client à en sa possession un périphérique ou aucun périphérique.
+  La cardinalité `0..1` signifie que le client à en sa possession un unique périphérique ou aucun périphérique.
 
-  * La classe ``Client01`` représente ce cas. (La classe se trouve dans le répertoire response)
+  * La classe ``Client01`` représente ce cas (La classe se trouve dans le répertoire response).
 
 - La cardinalité `0..*` signifie que le client peut avoir zéro ou plusieurs périphériques. Cela peut se traduire en Java de la manière suivante :
   ```
-  List<ImagingDevice> devices = new ArrayList<ImagingDevice>();
+  List<ImagingDevice> devices = new ArrayList<ImagingDevice>(); // Par défaut une liste vide de périphériques
   ```
   * La classe ``Client0N`` représente ce cas.
   
-Les deux cas représentent la composition.
+Les deux cas représentent la relation de composition.
 
 ### Question 1.3
 
@@ -42,9 +51,16 @@ Les deux cas représentent la composition.
 
 - Le `type dynamique` représente le type connu dès l'exécution du programme. Le type dynamique est souvent un sous-type d'un type statique.
 
+Voici quelques moyens pour reconnaître le genre de type d'une variable : 
+* Le type fixé par le programmeur peut être associé à d'autre type sans que cela pose d'erreurs de compilation, il s'agira d'un type dynamique.
+* Le type fixé par le programmeur à un type unique, on dira alors qu'il s'agit d'un type statique.
+
 ### Question 1.4
 
-- Concernant le `type statique`, nous avons la classe Client qui est statique pour l'association appareil.
+- Concernant le `type statique` associant à la variable appareil :
+  + La classe DigitalCamera
+  + La classe WebCam
+  + La classe Scanner
 
 - Concernant le `type dynamique`, nous avons :
     * l'interface Device
