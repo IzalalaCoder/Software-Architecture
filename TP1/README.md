@@ -70,7 +70,6 @@ Voici quelques moyens pour reconnaître le genre de type d'une variable : (moyen
 
 * Cas 01
 ***
-***
 
 ```mermaid
 graph TD;
@@ -78,7 +77,6 @@ graph TD;
 ```
 
 * Cas 0N
-***
 ***
 
 ```mermaid
@@ -99,7 +97,6 @@ graph TD;
 
 * Dans les deux cas
 ***
-***
 
 ```mermaid
 graph TD;
@@ -115,7 +112,6 @@ Depuis la classe Scanner, on aura accès aux méthodes suivantes : register(), c
 Depuis la classe WebCam, on aura accès aux méthodes suivantes : register(), capture(), setResolution(int) et setContrast(float).
 Depuis la classe DigitalCamera, on aura accès aux méthodes suivantes : register(), capture(), setResolution(int) et setFlash(bool).
 
-***
 ***
 
 ## Principes de base
