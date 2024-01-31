@@ -135,9 +135,15 @@ Les entités sont les suivants :
   * La classe WonderPlotCanvas (N'existe pas pour le moment)
 
 Les relations sont les suivantes :
-  * La composition depuis la classe Test vers la classe Polynome
-  * La composition depuis la classe Polynome vers la classe WonderPlotCanvas
+  * L'association depuis la classe Test vers la classe Polynome
+  * L'association depuis la classe Polynome vers la classe WonderPlotCanvas
 
+#### Voici le diagramme UML
+
+```mermaid
+graph TD;
+    Client
+```
 
 ### Question 2.3
 
@@ -148,13 +154,13 @@ Les principes suivent l'acronyme SOLID
     - la classe Polynome gère la notion de Polynome avec les calculs que cela engendre et elle utilise la classe WonderPlotCanvas permettant d'afficher le graphe résultant du polynôme.
     --> Je peux donc dire que la classe Polynome respecte ce principe
 
-    - La classe Test gère les tests des spécification de la classe Polynome
+    - La classe Test gère les tests des spécifications concernant la classe Polynome
     --> On peut donc dire que la classe Test respecte également ce principe
 
-    - La classe WonderPlotCanvas n'existe pas
+    - La classe WonderPlotCanvas n'étant pas coder, on peut supposer qu'elle respecte ce principe
 
   * 0 pour `Open/Close`
-    Cela signifie que les entités d'une application doit être ouvert en cas d'extension mais en cas de modification doit être fermée. Lorsqu'on souhaite corriger alors réouverture en extension. Si l'on souhaite apporter plus de fonctionnalité, de nouveaux besoins alors il est préférable de réaliser une nouvelle classe qui étend la précédente.
+    Lorsque qu'une classe est dite stable, cela signifie que les entités d'une classe doit être ouvert en cas d'extension mais en cas de modification doit être fermée. Lorsqu'on souhaite corriger alors réouverture en extension. Si l'on souhaite apporter plus de fonctionnalité, de nouveaux besoins alors il est préférable de réaliser une nouvelle classe qui étend la précédente.
 
     --> Ce principe peut être enfreint car possibilité d'incompréhension et ou d'erreur humaine.
 
