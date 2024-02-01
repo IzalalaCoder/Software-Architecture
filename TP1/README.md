@@ -158,8 +158,8 @@ classDiagram
    class Test
 
    class WonderPlotCanvas {
-      +moveTo()
-
+      +moveTo(double x, double y)
+      +lineTo(double x, double y)
    }
 ```
 
