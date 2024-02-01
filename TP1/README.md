@@ -130,9 +130,9 @@ Les paquetages sont les suivantes :
 Tous ces paquetages sont inclus dans le répertoire poly.
 
 Les entités sont les suivants :
-  * La classe Polynome
-  * La classe Test
-  * La classe WonderPlotCanvas (N'existe pas pour le moment)
+  * La classe Polynome se trouvant dans le paquetage polynome
+  * La classe Test se trouvant dans le paquetage test
+  * La classe WonderPlotCanvas (N'existe pas pour le moment) mais se trouverait dans le paquetage wonderland.
 
 Les relations sont les suivantes :
   * L'association depuis la classe Test vers la classe Polynome
@@ -145,6 +145,8 @@ Les relations sont les suivantes :
 title: Diagramme de classe
 ---
 classDiagram
+    Polynome  <.. Test
+    WonderPlotCanvas  <.. Polynome
     class Polynome {
         +getDegree() int
         +getCoefficient(int i) double
