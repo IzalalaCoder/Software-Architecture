@@ -141,8 +141,26 @@ Les relations sont les suivantes :
 #### Voici le diagramme UML
 
 ```mermaid
-graph TD;
-    Client
+---
+title: Diagramme de classe
+---
+classDiagram
+    class Polynome {
+        +getDegree() int
+        +getCoefficient(int i) double
+        +computeValue(double x) double
+        +sum(Polynome p) Polynome
+        +prod(Polynome p) Polynome
+        +plot(double x1, double x2, double stepx, WonderPlotCanvas canvas)
+        -coefficents : double
+    }
+
+   class Test
+
+   class WonderPlotCanvas {
+      +moveTo()
+
+   }
 ```
 
 ### Question 2.3
