@@ -195,6 +195,8 @@ Les principes suivent l'acronyme SOLID
     - Admettons maintenant que WonderPlotCanvas est une interface, alors cela respecte ce principe.
     - Concernant la classe Polynome, elle ne respecte pas le principe de ISP, car les responsabilités ne sont pas séparer ainsi que le couplage client et classes se multiplient donc.
 
+Un client représente ici un élément qui utilise une autre classe. Celui qui est à l'origine de l'utilisation de cette classe est donc le client.
+
   * D pour __`Dependency Inversion`__
 
 
