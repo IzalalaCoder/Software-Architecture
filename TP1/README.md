@@ -193,11 +193,10 @@ Les principes suivent l'acronyme SOLID
   Plusieurs types de clients impliquent plusieurs interfaces ! Cela implique une analyse des responsabilités d'une classe afin de les séparer en plusieurs classes ou interfaces. Cela induit donc une différenciation des notions qui peut être utiliser par un simple client. Le couplage client et interfaces est donc plus accessible.
     - Admettons que WonderPlotCanvas est une classe (je dis depuis le début qu'il s'agit d'une classe mais nous ne le savons pas), nous saurons que cela ne respectent pas le principe ISP.
     - Admettons maintenant que WonderPlotCanvas est une interface, alors cela respecte ce principe.
-  Concernant la classe Polynome, elle ne respecte pas le principe de ISP, car les responsabilités ne sont pas séparer ainsi que le couplage client et classes se multiplient donc.
+    - Concernant la classe Polynome, elle ne respecte pas le principe de ISP, car les responsabilités ne sont pas séparer ainsi que le couplage client et classes se multiplient donc.
 
   * D pour __`Dependency Inversion`__
 
-Le programme pourrait enfreindre,
 
 ### Question 2.4
 
@@ -205,10 +204,10 @@ Il s'agit d'une relation d'héritage entre les classes Polynome et Monome. Monom
 
 ### Question 2.5
 
-Monome étend donc la classe Polynome car elle a le même comportement. La où est attendue la classe Polynome, la classe Monome peut y être associée. Lors du constructeur on doit ajouter comme paramètre du constructeur de la super-classe qu'est Polynome : Le tableau représentant le monome. Par exemple ceci représenterait
+Monome étendra donc la classe Polynome car elle est une sorte de Polynome. La où est attendue la classe Polynome, la classe Monome peut y être associée. Lors du constructeur on doit ajouter comme paramètre du constructeur de la super-classe qu'est Polynome : Le tableau représentant le monome. Par exemple ceci représenterait
 
   ```
-    {0.0, 0.0, 1.0}
+    {0.0, 0.0, 1.0} ==> int degree = 2;
   ```
 
 le monome qui suit `x²`.
