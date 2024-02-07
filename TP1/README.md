@@ -214,11 +214,8 @@ Monome étendra donc la classe Polynome car elle est une sorte de Polynome. La o
 
 le monome qui suit `x²`.
 
-Cela est correct, mais cela ne respecte pas les principes énoncées plus tôt. Il ne s'agit pas de nouvelles fonctionnalité donc ne respecte pas le principe de Open/Close.
-
-De plus la classe serait vide de méthode, ni de requêtes. Absence d'attributs. Cela montrerait une absence d'ajout de fonctionnalités.
-
-De plus il n'a pas besoin d'un tableau contenant que des 0 avec comme dernier élément un 1.
+Cela est correct, mais cela ne respecte pas les principes énoncées plus tôt. Il ne s'agit pas de nouvelles fonctionnalité donc ne respecte pas le principe de Open/Close. De plus la classe serait vide de méthode, ni de requêtes. Absence d'attributs. Cela montrerait une absence d'ajout de fonctionnalités. De plus il n'a pas besoin d'un tableau contenant que des 0 avec comme dernier élément un 1. 
+Pour avoir cet impression de nouveauté, j'ajoute seulement un unique attribut privée qui représentera uniquement le degré du monome. Dans notre exemple le degre vaudra donc 2.
 
 ### Question 2.6
 
