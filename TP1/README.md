@@ -125,7 +125,7 @@ Le contenu du répertoire poly a été récupéré. L'import a été fait.
 Les paquetages sont les suivantes :
   * polynome
   * test
-  * wonderland
+  * wonderland.graphicPackageYoullNeverFind
 
 Tous ces paquetages sont inclus dans le répertoire poly.
 
@@ -168,23 +168,23 @@ classDiagram
 ### Question 2.3
 
 Les principes suivent l'acronyme SOLID
-  * S pour `Single Responsability`
+  * S pour __`Single Responsability`__
     Cela correspond au fait qu'une classe doit avoir une seule et unique responsabilité
     Dans notre cas :
-    - la classe Polynome gère la notion de Polynome avec les calculs que cela engendre et elle utilise la classe WonderPlotCanvas permettant d'afficher le graphe résultant du polynôme.
-    --> Je peux donc dire que la classe Polynome respecte ce principe
+    - La classe Polynome réalise deux choses distinctes qui sont les choses suivantes :
+      * Les opérations dédiées aux polynômes telles que l'addition, le produit
+      * L'opération d'affichage du polynôme
+    Elle a donc deux responsabilités.
+    - La classe Test ne contenant que la fonction statique dénommée main est utilisée uniquement pour le test de la classe Polynôme.
+    - La classe WonderPlotCanvas n'étant pas programmé, je ne peux donc que supposer. Cette dernière étant utilisé pour le rendu graphique d'un polŷnome et uniquement pour cela.
+   On peut donc dire que les classes Test et WonderPlotCanvas respecte le principe SRP. Seule la classe Polynome ne respecte pas ce principe.
 
-    - La classe Test gère les tests des spécifications concernant la classe Polynome
-    --> On peut donc dire que la classe Test respecte également ce principe
-
-    - La classe WonderPlotCanvas n'étant pas coder, on peut supposer qu'elle respecte ce principe
-
-  * 0 pour `Open/Close`
+  * 0 pour __`Open/Close`__
     Lorsque qu'une classe est dite stable, cela signifie que les entités d'une classe doit être ouvert en cas d'extension mais en cas de modification doit être fermée. Lorsqu'on souhaite corriger alors réouverture en extension. Si l'on souhaite apporter plus de fonctionnalité, de nouveaux besoins alors il est préférable de réaliser une nouvelle classe qui étend la précédente.
 
     --> Ce principe peut être enfreint car possibilité d'incompréhension et ou d'erreur humaine.
 
-  * L pour `Liskov Substitution`
+  * L pour __`Liskov Substitution`__
   
     ***
     ***
@@ -194,10 +194,10 @@ Les principes suivent l'acronyme SOLID
 
     Le sous-typage doit s'appliquer au TDA (Type de données abstraits)
 
-  * I pour `Interface Segregation`
+  * I pour __`Interface Segregation`__
   Plusieurs types de clients impliquent plusieurs
 interfaces !
-  * D pour `Dependency Inversion`
+  * D pour __`Dependency Inversion`__
 
 Le programme pourrait enfreindre,
 
