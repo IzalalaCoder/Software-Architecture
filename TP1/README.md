@@ -193,6 +193,7 @@ Les principes suivent l'acronyme SOLID
   Plusieurs types de clients impliquent plusieurs interfaces ! Cela implique une analyse des responsabilités d'une classe afin de les séparer en plusieurs classes ou interfaces. Cela induit donc une différenciation des notions qui peut être utiliser par un simple client. Le couplage client et interfaces est donc plus accessible.
     - Admettons que WonderPlotCanvas est une classe (je dis depuis le début qu'il s'agit d'une classe mais nous ne le savons pas), nous saurons que cela ne respectent pas le principe ISP.
     - Admettons maintenant que WonderPlotCanvas est une interface, alors cela respecte ce principe.
+  Concernant la classe Polynome, elle ne respecte pas le principe de ISP, car les responsabilités ne sont pas séparer ainsi que le couplage client et classes se multiplient donc.
 
   * D pour __`Dependency Inversion`__
 
