@@ -180,19 +180,13 @@ Les principes suivent l'acronyme SOLID
    On peut donc dire que les classes Test et WonderPlotCanvas respecte le principe SRP. Seule la classe Polynome ne respecte pas ce principe.
 
   * 0 pour __`Open/Close`__
-    Lorsque qu'une classe est dite stable, cela signifie que les entités d'une classe doit être ouvert en cas d'extension mais en cas de modification doit être fermée. Lorsqu'on souhaite corriger alors réouverture en extension. Si l'on souhaite apporter plus de fonctionnalité, de nouveaux besoins alors il est préférable de réaliser une nouvelle classe qui étend la précédente.
+    Lorsque qu'une classe est dite stable, cela signifie que les entités d'une classe doit être ouvert en cas d'extension mais en cas de modification doit être fermée. Lorsqu'on souhaite corriger alors réouverture en extension. Si l'on souhaite apporter plus de fonctionnalité, de nouveaux besoins alors il est préférable de réaliser une nouvelle classe qui étend la précédente. Selon moi, la classe Test peut être modifié à l'avenir donc susceptible de ne pas respecter le principe OC.
 
     --> Ce principe peut être enfreint car possibilité d'incompréhension et ou d'erreur humaine.
 
   * L pour __`Liskov Substitution`__
-  
-    ***
-    ***
-    *TODO* A faire
-    ***
-    ***
-
-    Le sous-typage doit s'appliquer au TDA (Type de données abstraits)
+    Le sous-typage doit s'appliquer au TDA (Type de données abstraits), cela induit que n'importe quel sous classe d'une classe peut être interchangée avec cette dernière sans en altérer la compréhension. Par exemple dans l'exemple du cours, on sait qu'un carré est un rectangle mais théoriquement parlant un carré ne peut être un rectangle de part ses propriétés.
+    Pour le moment nous n'avons pas de sous classes, mais pour respecter ce principe, la sous-classe ne doit pas alterer la super-classe. 
 
   * I pour __`Interface Segregation`__
   Plusieurs types de clients impliquent plusieurs
