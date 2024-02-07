@@ -186,18 +186,21 @@ Les principes suivent l'acronyme SOLID
 
   * L pour __`Liskov Substitution`__
     Le sous-typage doit s'appliquer au TDA (Type de données abstraits), cela induit que n'importe quel sous classe d'une classe peut être interchangée avec cette dernière sans en altérer la compréhension. Par exemple dans l'exemple du cours, on sait qu'un carré est un rectangle mais théoriquement parlant un carré ne peut être un rectangle de part ses propriétés.
-    Pour le moment nous n'avons pas de sous classes, mais pour respecter ce principe, la sous-classe ne doit pas alterer la super-classe. 
+    Pour le moment nous n'avons pas de sous classes, mais pour respecter ce principe, la sous-classe ne doit pas alterer le fonctionnement de la super-classe.
+    La formule est donc la suivante : Si S est une sous-classe de T, alors les objets de type T peuvent être remplacés par des objets de type S.
 
   * I pour __`Interface Segregation`__
-  Plusieurs types de clients impliquent plusieurs
-interfaces !
+  Plusieurs types de clients impliquent plusieurs interfaces ! Cela implique une analyse des responsabilités d'une classe afin de les séparer en plusieurs classes ou interfaces. Cela induit donc une différenciation des notions qui peut être utiliser par un simple client. Le couplage client et interfaces est donc plus accessible.
+    - Admettons que WonderPlotCanvas est une classe (je dis depuis le début qu'il s'agit d'une classe mais nous ne le savons pas), nous saurons que cela ne respectent pas le principe ISP.
+    - Admettons maintenant que WonderPlotCanvas est une interface, alors cela respecte ce principe.
+
   * D pour __`Dependency Inversion`__
 
 Le programme pourrait enfreindre,
 
 ### Question 2.4
 
-Il s'agit d'une relation d'héritage entre les classes Polynome et Monome.
+Il s'agit d'une relation d'héritage entre les classes Polynome et Monome. Monome doit donc redéfinir certaines méthodes afin de correspondre à la notion d'un Monome.
 
 ### Question 2.5
 
