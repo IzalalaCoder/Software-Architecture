@@ -1,6 +1,6 @@
 package shapes;
 
-public interface Line extend Drawable {
+public interface Line extends Drawable {
 
   public double getLength();
 
