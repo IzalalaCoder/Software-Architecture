@@ -1,6 +1,6 @@
 package shapes;
 
-public interface Circle implements Drawable {
+public interface Circle extends Drawable {
 
   public double getRadius();
 
