@@ -1,4 +1,5 @@
-# Software-Architecture
-Travaux pratiques du module Architecture Logicielle de l'Université de Rouen
+# Second TP 
 
-[x] = TP1 -> UML et Principes de POO
+Concernant la première question, le diagramme étant dessiner sur papier.
+
+Nous allons ici utiliser le patron de factory
