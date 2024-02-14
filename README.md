@@ -2,4 +2,4 @@
 
 Concernant la première question, le diagramme étant dessiner sur papier.
 
-Nous allons ici utiliser le patron de factory
+Je commence le code donc
