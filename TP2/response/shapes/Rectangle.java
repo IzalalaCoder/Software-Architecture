@@ -1,6 +1,6 @@
 package shapes;
 
-public interface Rectangle implements Drawable {
+public interface Rectangle extends Drawable {
 
   public double getWidth();
 
