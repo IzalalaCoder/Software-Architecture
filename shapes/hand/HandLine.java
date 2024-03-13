@@ -24,4 +24,9 @@ public class HandLine implements Line {
 		return Math.sqrt(dx*dx+dy*dy);
 	}
 
+	@Override
+	public void Accept(ShapeVisitor shapeVisitor) {
+		shape.VisitHandLine(this);
+	}
+
 }
