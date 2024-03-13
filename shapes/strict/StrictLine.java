@@ -23,4 +23,9 @@ public class StrictLine implements Line {
 		return Math.sqrt(dx*dx+dy*dy);
 	}
 
+	@Override
+	public void Accept(ShapeVisitor shapeVisitor) {
+		shape.VisitStrictLine(this);
+	}
+
 }
