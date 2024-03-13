@@ -1,5 +1,8 @@
 package shapes.visitor;
 
+import shapes.hand.*;
+import shapes.strict.*;
+
 public interface ShapeVisitor {
   public void VisitStrictLine(StrictLine strictLine);
   public void VisitStrictRectangle(StrictRectangle strictRectangle);
