@@ -20,10 +20,4 @@ public class StrictCircle implements Circle {
 	@Override
 	public double getRadius() { return rad; }
 	
-	// Méthode de rendu :
-	@Override
-	public void draw(Graphics2D screen) {
-		screen.setColor(c);
-		screen.draw(new Ellipse2D.Double(cx-rad, cy-rad, rad*2, rad*2));
-	}
 }
