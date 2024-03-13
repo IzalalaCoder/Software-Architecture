@@ -20,4 +20,9 @@ public class HandCircle implements Circle {
 	@Override
 	public double getRadius() { return rad; }
 
+	@Override
+	public void Accept(ShapeVisitor shapeVisitor) {
+		shape.VisitHandCircle(this);
+	}
+
 }
