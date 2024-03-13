@@ -18,12 +18,6 @@ public class StrictRectangle implements Rectangle {
 	}
 
 	@Override
-	public void draw(Graphics2D screen) {
-		screen.setColor(c);
-		screen.draw(new Rectangle2D.Double(x0, y0, x1-x0, y1-y0));
-	}
-
-	@Override
 	public double getWidth() {
 		return Math.abs(x1-x0);
 	}
