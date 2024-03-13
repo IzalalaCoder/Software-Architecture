@@ -1,11 +1,11 @@
 package shapes.visitor;
 
 public interface ShapeVisitor {
-  public void VisitStrictLine(ShapeVisitor shapeVisitor);
-  public void VisitStrictRectangle(ShapeVisitor shapeVisitor);
-  public void VisitStrictCircle(ShapeVisitor shapeVisitor);
-  public void VisitGroupShape(ShapeVisitor shapeVisitor);
-  public void VisitHandLine(ShapeVisitor shapeVisitor);
-  public void VisitHandRectangle(ShapeVisitor shapeVisitor);
-  public void VisitHandCircle(ShapeVisitor shapeVisitor);
+  public void VisitStrictLine(StrictLine strictLine);
+  public void VisitStrictRectangle(StrictRectangle strictRectangle);
+  public void VisitStrictCircle(StrictCircle strictCircle);
+  public void VisitGroups(Groups groups);
+  public void VisitHandLine(HandLine handLine);
+  public void VisitHandRectangle(HandRectangle handRectangle);
+  public void VisitHandCircle(HandCircle handCircle);
 }
