@@ -27,4 +27,9 @@ public class StrictRectangle implements Rectangle {
 		return Math.abs(y1-y0);
 	}
 
+	@Override
+	public void Accept(ShapeVisitor shapeVisitor) {
+		shape.VisitStrictRectangle(this);
+	}
+
 }
