@@ -19,5 +19,11 @@ public class StrictCircle implements Circle {
 	// Méthodes propres à Circle :
 	@Override
 	public double getRadius() { return rad; }
+
+
+	@Override
+	public void Accept(ShapeVisitor shapeVisitor) {
+		shape.VisitStrictCircle(this);
+	}
 	
 }
